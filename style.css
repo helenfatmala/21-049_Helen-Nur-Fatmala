@@ -1,0 +1,152 @@
+@import "theme.css";
+@import "timeline.css";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito Sans", serif;
+  color: var(--text);
+  background: var(--bg);
+  transition: background 500ms ease-in-out, color 1000ms ease-in-out;
+}
+
+.gambar {
+  border-radius: 50%;
+  width: 250px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  height: 70px;
+  width: 100%;
+  background: var(--bg-nav);
+  z-index: 1;
+}
+
+.navlist {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+.item {
+  cursor: pointer;
+}
+
+.contrast {
+  color: var(--text-contrast);
+}
+
+@media (max-width: 700px) {
+  .contact-nav {
+    flex-direction: column;
+  }
+}
+
+header {
+  padding: 1em;
+  background: var(--bg-nav);
+  margin-top: 70px;
+  margin-bottom: 1em;
+  padding-bottom: 3.5em;
+  text-align: center;
+  clip-path: polygon(100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
+}
+
+footer {
+  background: var(--footer);
+  backdrop-filter: hue-rotate(90deg);
+  padding: 1em;
+  padding-left: 20%;
+  padding-right: 20%;
+  text-align: center;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.sec-title {
+  text-align: center;
+}
+
+#tentang {
+  padding-left: 20%;
+  padding-right: 20%;
+  text-align: center;
+}
+
+#organisasi {
+  background: var(--odd);
+  backdrop-filter: hue-rotate(180deg);
+  clip-path: polygon(100% 10%, 100% 100%, 0 90%, 0 0);
+  padding-top: 7%;
+  padding-bottom: 7%;
+}
+
+#education {
+  background: var(--odd);
+  backdrop-filter: hue-rotate(180deg);
+  clip-path: polygon(100% 10%, 100% 100%, 0 90%, 0 0);
+  padding-top: 7%;
+  padding-bottom: 7%;
+}
+
+#marketing {
+  background: var(--even);
+  backdrop-filter: hue-rotate(270deg);
+  clip-path: polygon(100% 0%, 100% 85%, 0 100%, 0 15%);
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--odd);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--even);
+}
+
+@media (max-width: 700px) {
+  body::-webkit-scrollbar {
+    width: 0.3rem;
+  }
+
+  #experience {
+    padding-top: 20%;
+    padding-bottom: 20%;
+  }
+
+  #education {
+    padding-top: 15%;
+    padding-bottom: 15%;
+  }
+
+  footer {
+    padding-top: 10%;
+  }
+}

@@ -1,0 +1,69 @@
+.linimasa {
+  width: 65%;
+  position: relative;
+  margin-left: 17.5%;
+}
+
+.subjudul {
+  font-weight: 300;
+}
+
+.konten {
+  position: relative;
+  margin: 20px 0;
+  padding: 20px;
+}
+
+.konten .waktu {
+  position: absolute;
+  bottom: 0px;
+}
+
+@media (min-width: 700px) {
+  .konten {
+    width: 50%;
+    clear: both;
+  }
+
+  .konten:nth-child(odd) {
+    float: left;
+    transform: translatex(-65px);
+    text-align: right;
+  }
+
+  .konten:nth-child(odd) > .waktu {
+    right: 20px;
+  }
+
+  .konten:nth-child(even) {
+    float: right;
+    transform: translateX(65px);
+    text-align: left;
+  }
+
+  .linimasa::before {
+    content: "";
+    width: 1px;
+    height: 100%;
+    background: var(--fg);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .konten::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background: var(--fg);
+    position: absolute;
+    top: 50%;
+    right: -33px;
+    border-radius: 50%;
+  }
+
+  .konten:nth-child(even)::before {
+    left: -33px;
+  }
+}
